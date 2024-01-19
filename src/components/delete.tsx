@@ -2,7 +2,7 @@ import React from "react";
 
 interface DeleteButtonProps {
   handleDeleteSelected: () => void;
-  selectedRows: any[]; // Replace 'any[]' with the actual type of your selectedRows if possible
+  selectedRows: any[]; 
 }
 
 const DeleteButton: React.FC<DeleteButtonProps> = ({ handleDeleteSelected, selectedRows }) => {

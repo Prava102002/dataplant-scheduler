@@ -10,7 +10,7 @@ import EditData from "./editdata";
 import AddData from "./addData";
 
 const URL =
-  "";
+  "mongodb+srv://pravallika102002:Prava2002@cluster0.1yrjhf3.mongodb.net/schedules?retryWrites=true&w=majority";
 
 const Interface = () => {
   const [users, setUsers] = useState([]);

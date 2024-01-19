@@ -95,7 +95,7 @@ const AddData = ({showAdd,setShowAdd}) => {
     e.preventDefault();
     console.log(formData,"formData")
     try{
-    const res = await axios.post("https://dataplant-assessment.onrender.com/schedule",
+    const res = await axios.post("mongodb+srv://pravallika102002:Prava2002@cluster0.1yrjhf3.mongodb.net/schedules?retryWrites=true&w=majority/schedule",
    JSON.stringify(formData), {
       headers: {
         'Content-Type': 'application/json'
