@@ -95,12 +95,16 @@ const AddData = ({showAdd,setShowAdd}) => {
     e.preventDefault();
     console.log(formData,"formData")
     try{
-    const res = await axios.post("mongodb+srv://pravallika102002:Prava2002@cluster0.1yrjhf3.mongodb.net/schedules?retryWrites=true&w=majority/schedule",
-   JSON.stringify(formData), {
-      headers: {
-        'Content-Type': 'application/json'
-      }});
-
+      const res = await axios.post(
+        "https://dataplant-assessment.onrender.com/schedule",
+        formData,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      
       console.log(res, res)
       setShowAdd(false);
     }
@@ -108,6 +112,7 @@ const AddData = ({showAdd,setShowAdd}) => {
       console.log(err,"err")
     }
   }
+  
   
 
 
@@ -166,7 +171,7 @@ const AddData = ({showAdd,setShowAdd}) => {
         }
         <div className='flex justify-between p-3 gap-2'>
           <label className='w-1/3'>Time</label>
-          <input type='time' id='Time' className='border-2 border-gray-400 p-1 w-2/3' onChange={handleInputChange} default='10:00 AM'/>
+          <input type='time' id='Time' className='border-2 border-gray-400 p-1 w-2/3' onChange={handleInputChange} defaultValue='10:00 AM'/>
         </div>
         <div className='flex justify-end p-3'>
         <button type='button' className='p-2 gap-2 border-2 border-blue-950 mx-2 rounded-md bg-purple-900 text-white text-sm' onClick={()=>setShowAdd(!showAdd)}>Cancel</button>

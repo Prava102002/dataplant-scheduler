@@ -94,7 +94,7 @@ const EditData = ({edit,setEdit, id}) => {
   const handleSubmit = async (e)=>{
     e.preventDefault();
     try{
-      const res = await axios.post("mongodb+srv://pravallika102002:Prava2002@cluster0.1yrjhf3.mongodb.net/schedules?retryWrites=true&w=majority/schedule",formData, {
+      const res = await axios.post("https://dataplant-assessment.onrender.com/schedule",formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }});
