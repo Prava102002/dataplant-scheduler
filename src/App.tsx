@@ -1,26 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Admin from './container/Admin';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div  className='w-100 h-[6vh] bg-gray-100 block'>
+      </div>
+        <div className='w-100 h-[94vh] bg-gray-100 flex'>
+          <div className='w-[5%] h-[100%] bg-indigo-950'>
+          </div>
+          <div className='h-[100%] w-[95%]'>
+            <div className='h-[5%] w-[100%] bg-gray-300'>
+            </div>
+            <Admin/>
+          </div>
+        </div>
+    </>
+  )
 }
 
 export default App;
